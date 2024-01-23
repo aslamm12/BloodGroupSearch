@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Login Form</title>
+	<style>
+
+    .header {
+
+      display: block;
+
+      justify-content: space-between;
+
+      text-align: center;
+
+	margin: 0 auto;
+      padding: 15px;
+
+      background-color: #cc0000;
+
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+
+
+    .header h1 {
+
+      color: white;
+
+      font-size: 30px;
+
+      //font-family: "Pacifico", cursive;
+
+    }
+
+
+		.button {
+		background-color: white;
+		//border: 2px solid #240c0c;
+		color: #240c0c;
+		padding: 10px 20px;
+		text-align: Center;
+		text-transform: uppercase;
+		font-weight: bold;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgpa(0,0,0,0.23);
+		transition: all 0.3s;
+		display: flex;
+		font-size: 12px;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 10px;
+		}
+		form {
+			width: 400px;
+			margin:0 auto;
+			border: 1px solid #ccc;
+			padding: 30px;
+			background-color: white;
+			border-color: #240c0c;
+			border-radius: 0px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.3);	
+		}
+		select {
+		margin: 0 auto;
+		width: 200px;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		;
+		text-align: center;
+		display: block;
+		font-size: 18px;
+		}
+		option {
+		text-align: center;
+		display: block;
+		background-color: white;
+		padding: 120px;
+		}
+		label {
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		font-size: 20px;
+		color: #240c0c;
+		}
+		input {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 20px;
+		}
+		footer {
+
+      	background-color: #cc0000;
+	color: #fff;
+	padding: 55px 20px;
+	text-align: center;
+		}
+
+	</style>
+    <script>
+      function validateForm() {
+        var username = document.forms["loginForm"]["username"].value;
+        var password = document.forms["loginForm"]["password"].value;
+
+        if (username == "" || password == "") {
+          alert("Username and password are required");
+          return false;
+        }
+
+        // Check if the username and password match
+       if (username == "aslam_m12" && password == "9645811300") {
+          return true;
+        } else {
+          alert("Invalid username or password");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+
+      <h1>Admin log-in</h1>
+
+	</header><br><br><br><br>
+    <form action="admin.php" method="POST" name="loginForm" onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br><br>
+	<div class="button">
+      	<input type="submit" value="Submit">
+	<input type="button" value="Back" onclick="history.go(-1)">
+	</div>
+    </form><br><br><br><br>
+	<footer>
+		<p>Instructions to Admin: Only admin have the complete access to the system, if you are a admin kindly enter your username and password.</p>
+	</footer>
+  </body>
+</html>

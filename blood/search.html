@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Blood Donor Search</title>
+
+	<style>
+		body {
+
+		  margin: 0;
+
+		  padding: 0;
+
+		background-color: white;
+
+		}
+		h1 {
+		color: #240c0c;
+		text-align: center;
+		padding: 20px 50px;
+		display: block;
+		}
+		input {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 20px;
+		}
+		.button {
+		background-color: white;
+		color: #240c0c;
+		padding: 10px 20px;
+		text-align: Center;
+		text-transform: uppercase;
+		font-weight: bold;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgpa(0,0,0,0.23);
+		transition: all 0.3s;
+		display: flex;
+		justify-content: center;
+		font-size: 15px;
+		cursor: pointer;
+		}
+		select {
+		width: 200px;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 18px;
+		}
+		option {
+		text-align: center;
+		display: block;
+		background-color: white;
+		padding: 120px;
+		}
+		label {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 20px;
+		color: #240c0c;
+		}
+		form {
+			width: 400px;
+			margin:0 auto;
+			border: 2px solid #240c0c;
+			padding: 30px;
+			background-color: white;
+			border-radius: 20px;	
+		}
+		footer {
+
+		  background-color: white;
+
+		  color: #240c0c;
+
+		  padding: 10px;
+
+		  text-align: center;
+
+		}
+
+	</style>
+  </head>
+
+  <body>
+
+	<h1>Blood Donor Search</h1>
+
+    <form action="search.php" method="post">
+
+      <label for="search_blood_group">Blood Group:</label>
+
+	<br><select id="search_blood_group" name="search_blood_group">
+
+        <option value="A+">A+</option>
+
+        <option value="B+">B+</option>
+
+        <option value="O+">O+</option>
+ 
+       <option value="AB+">AB+</option>
+
+        <option value="A-">A-</option>
+
+        <option value="B-">B-</option>
+
+        <option value="O-">O-</option>
+
+       <option value="AB-">AB-</option>
+	</select>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<div class="button">
+      		<input type="submit" value="Search"><br><br>
+      		<input type="button" value="Back" onclick="history.go(-1)">
+	</div>  
+	</form><br><br>
+	 <footer>
+
+    	<p>GPTC Kunnamkulam CT 2021-2023</p>
+
+  	</footer>
+
+
+</body>
+</html>

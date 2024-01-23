@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Blood Donor Search</title>
+
+	<style>
+		body {
+
+		  margin: 0;
+
+		  padding: 0;
+
+		background-color: white;
+
+		}
+
+    .header {
+
+      display: block;
+
+	color: white;
+      justify-content: space-between;
+
+      text-align: center;
+
+	margin: 0 auto;
+      padding: 15px;
+
+      background-color: #cc0000;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);    }
+
+
+    .header h1 {
+
+      color: white;
+
+      font-size: 30px;
+
+      //font-family: "Pacifico", cursive;
+
+    }
+		.button {
+		background-color: white;
+		//border: 2px solid #240c0c;
+		color: #240c0c;
+		padding: 10px 20px;
+		text-align: Center;
+		text-transform: uppercase;
+		font-weight: bold;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgpa(0,0,0,0.23);
+		transition: all 0.3s;
+		display: flex;
+		font-size: 12px;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 10px;
+		}
+		form {
+			width: 400px;
+			margin:0 auto;
+			border: 1px solid #ccc;
+			padding: 30px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+			background-color: white;
+			font-size: 3px;
+			border-color: #240c0c;
+			border-radius: 0px;	
+		}
+		select {
+		margin: 0 auto;
+		width: 200px;
+		padding: 5px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		text-align: center;
+		display: block;
+		font-size: 15px;
+		}
+		div
+		{
+		display: flex;
+		}
+		option {
+		text-align: center;
+		display: block;
+		background-color: white;
+		padding: 120px;
+		}
+		label {
+		font-size: 16px;
+		color: #240c0c;
+		}
+		input {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 15px;
+		}
+		label
+		{
+  		margin-right: 10px;
+  		width: 100px;
+		}
+
+	</style>
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <h1>Search for donor</h1>
+
+	</header><br><br>    <form action="search.php" method="post">
+
+
+      <div><label for="search_blood_group">Blood Group:</label>
+
+	<br><select id="search_blood_group" name="search_blood_group">
+
+        <option value="A+">A+</option>
+
+        <option value="B+">B+</option>
+
+        <option value="O+">O+</option>
+ 
+       <option value="AB+">AB+</option>
+
+        <option value="A-">A-</option>
+
+        <option value="B-">B-</option>
+
+        <option value="O-">O-</option>
+
+       <option value="AB-">AB-</option>
+	</select></div> <br><br><br>
+
+  <div><label for="country"> Country: </label><br>
+	<select id="country" name="country">
+    <option value="">Select a country</option>
+    <option value="india" selected>India</option>
+  </select>
+  </div><br><br><br>
+
+  <div><label for="state">State:</label><br>
+	<select id="state" name="state">
+    <option value="">Select a state</option>
+    <option value="Kerala" selected>kerala</option>
+  </select>
+  </div><br><br><br>
+
+	<div><label for="district">District:</label><br>
+	<select id="district" name="district">
+	<option value="alappuzha">Alappuzha</option>
+      <option value="ernakulam">Ernakulam</option>
+      <option value="idukki">Idukki</option>
+      <option value="kannur">Kannur</option>
+      <option value="kasaragod">Kasaragod</option>
+      <option value="kollam">Kollam</option>
+      <option value="kottayam">Kottayam</option>
+      <option value="kozhikode">Kozhikode</option>
+      <option value="malappuram">Malappuram</option>
+      <option value="palakkad">Palakkad</option>
+      <option value="pathanamthitta">Pathanamthitta</option>
+      <option value="thrissur">Thrissur</option>
+      <option value="thiruvananthapuram">Thiruvananthapuram</option>
+      <option value="wayanad">Wayanad</option></select>
+  	</div><br><br><br><br><br><br><br>
+
+	<div class="button">
+      		<input type="submit" value="Search"><br>
+		<input type="reset" value="Reset"><br>
+      		<input type="button" value="Back" onclick="history.go(-1)">
+	</div>  
+	</form><br><br>
+
+	<footer class="header">
+		<p>Instruction: Currently the project is only focusing for the users and donor within kerala,india. our project devolopment team is currently working to make it possible world wide. if you are a keralite kindly register. Thank you</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete Blood Group Details</title>
+	<style>
+	header {
+
+      			background-color: white;
+
+			color: #240c0c;
+      			text-align: center;
+
+			margin: 0 auto;
+      			padding: 5px;
+			//border: 1px solid #ccc;
+			//border-color:;
+		}
+		.button {
+		background-color: white;
+		//border: 2px solid #240c0c;
+		color: #240c0c;
+		padding: 10px 20px;
+		text-align: Center;
+		text-transform: uppercase;
+		font-weight: bold;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgpa(0,0,0,0.23);
+		transition: all 0.3s;
+		display: flex;
+		font-size: 12px;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 10px;
+		}
+		form {
+			width: 400px;
+			margin:0 auto;
+			border: 2px solid #ccc;
+			padding: 30px;
+			background-color: white;
+			border-color: #240c0c;
+			border-radius: 20px;	
+		}
+		select {
+		margin: 0 auto;
+		width: 200px;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		;
+		text-align: center;
+		display: block;
+		font-size: 18px;
+		}
+		option {
+		text-align: center;
+		display: block;
+		background-color: white;
+		padding: 120px;
+		}
+		label {
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		font-size: 20px;
+		color: #240c0c;
+		}
+		input {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 20px;
+		}
+		footer {
+
+		  background-color: white;
+
+		  color: #240c0c;
+
+		  padding: 10px;
+
+		  text-align: center;
+
+		}
+
+	</style>
+  </head>
+  <body>
+    <header><h1>Delete Blood Group Details</h1></header>
+    <form action="delete.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+	<br><br>
+
+	<label for="phone">Phone No:</label>
+
+      <input type="number" id="phone" name="phone" required>
+      <br><br><br>
+	<div class="button">
+      <input type="submit" name="submit" value="Delete">
+	<input type="button" value="Back" onclick="history.go(-2)">
+	</div>
+    </form>
+	<footer>
+
+    <p>GPTC Kunnamkulam CT 2021-2023</p>
+
+  </footer>
+  </body>
+</html>

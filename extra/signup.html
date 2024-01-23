@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+	<title>Sign Up Page</title>
+    <script>
+      function validateForm() {
+        const usernameInput = document.querySelector('#username');
+        const passwordInput = document.querySelector('#password');
+
+        // Function to validate input
+        function validateInput(input) {
+          if (input.type === 'text') {
+            const usernameRegex = /^[a-zA-Z0-9_]{4,16}$/;
+            return usernameRegex.test(input.value);
+          } else {
+            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+            return passwordRegex.test(input.value);
+          }
+        }
+
+        // Check input values
+        if (!validateInput(usernameInput)) {
+          alert('Username must be 4-16 characters and contain only alphanumeric characters or underscores.');
+          usernameInput.value = '';
+          usernameInput.focus();
+          return false;
+        }
+
+        if (!validateInput(passwordInput)) {
+          alert('Password must be at least 8 characters and contain at least one lowercase letter, one uppercase letter, and one number.');
+          passwordInput.value = '';
+          passwordInput.focus();
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+
+	<style>
+		header {
+
+      			background-color: white;
+
+			color: #240c0c;
+      			text-align: center;
+
+			margin: 0 auto;
+      			padding: 5px;
+			//border: 1px solid #ccc;
+			//border-color:;
+		}
+		.button {
+		background-color: white;
+		//border: 2px solid #240c0c;
+		color: #240c0c;
+		padding: 10px 20px;
+		text-align: Center;
+		text-transform: uppercase;
+		font-weight: bold;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgpa(0,0,0,0.23);
+		transition: all 0.3s;
+		display: flex;
+		font-size: 12px;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 10px;
+		}
+		form {
+			width: 400px;
+			margin:0 auto;
+			border: 2px solid #ccc;
+			padding: 30px;
+			background-color: white;
+			border-color: #240c0c;
+			border-radius: 20px;	
+		}
+		select {
+		margin: 0 auto;
+		width: 200px;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		text-align: center;
+		display: block;
+		font-size: 18px;
+		}
+		option {
+		text-align: center;
+		display: block;
+		background-color: white;
+		padding: 120px;
+		}
+		label {
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		font-size: 20px;
+		color: #240c0c;
+		}
+		input {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 20px;
+		}
+		footer {
+
+		  background-color: white;
+
+		  color: #240c0c;
+
+		  padding: 10px;
+
+		  text-align: center;
+
+		}
+
+	</style>
+  </head>
+
+<body>
+	<header><h1>Sign Up</h1></header>
+	<form method="post" action="sign_up.php" onsubmit="return validateForm()">
+		<label>Username:</label>
+		<input type="text" name="username" id="username" required><br><br>
+		<label>Password:</label>
+		<input type="password" name="password" id="password" required><br><br><br><br>
+	<div class="button">
+		<input type="submit" value="Sign Up">
+		<input type="button" value="Back" onclick="history.go(-1)">
+	</div>
+	</form>
+	<footer>
+
+    	<p>GPTC Kunnamkulam CT 2021-2023</p>
+
+  </footer>
+</body>
+</html>

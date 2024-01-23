@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Blood Donor Registration</title>
+
+		<script>
+function validateForm() {
+  var name = document.getElementById("name").value;
+	var namePattern = /^[a-zA-Z\s]+$/;
+  var phone = document.getElementById("no").value;
+ var phonePattern = /^\d{10}$/;
+  var email = document.getElementById("email").value;
+ var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+if (!namePattern.test(name)) {
+    alert("Invalid name! Please enter a valid name.");
+    return false;
+}
+if (!phonePattern.test(phone)) {
+    alert("Invalid phone number! Please enter a valid 10-digit phone number.");
+    return false;
+  }
+ if (!emailPattern.test(email)) {
+    alert("Invalid email address! Please enter a valid email address.");
+    return false;
+  }
+  return true;
+}
+		</script>
+
+		<style>
+		body {
+
+		  margin: 0;
+
+		  padding: 0;
+
+		background-color: white;
+
+		}
+
+    .header {
+
+      display: block;
+
+	color: white;
+      justify-content: space-between;
+
+      text-align: center;
+
+	margin: 0 auto;
+      padding: 15px;
+
+      background-color: #cc0000;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);    }
+
+
+    .header h1 {
+
+      color: white;
+
+      font-size: 30px;
+
+      //font-family: "Pacifico", cursive;
+
+    }
+		.button {
+		background-color: white;
+		//border: 2px solid #240c0c;
+		color: #240c0c;
+		padding: 10px 20px;
+		text-align: Center;
+		text-transform: uppercase;
+		font-weight: bold;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgpa(0,0,0,0.23);
+		transition: all 0.3s;
+		display: flex;
+		font-size: 15px;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 10px;
+		}
+		form {
+			width: 400px;
+			margin:0 auto;
+			border: 1px solid #ccc;
+			padding: 30px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+			background-color: white;
+			font-size: 3px;
+			border-color: #240c0c;
+			border-radius: 0px;	
+		}
+		select {
+		margin: 0 auto;
+		width: 200px;
+		padding: 5px;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		text-align: center;
+		display: block;
+		font-size: 15px;
+		}
+		div
+		{
+		display: flex;
+		}
+		option {
+		text-align: center;
+		display: block;
+		background-color: white;
+		padding: 120px;
+		}
+		input {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		font-size: 15px;
+		}
+		label
+		{
+		color: #240c0c;
+		font-size: 16px;
+  		margin-right: 10px;
+  		width: 100px;
+		}
+		//img {
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		}
+	</style>
+  </head>
+
+  <body>
+    <header class="header">
+
+      <h1>Donor registration</h1>
+
+	</header><br><br>
+    <form action="register.php" method="post" onsubmit="return validateForm()">
+	
+	<div><label for="name">Name:</label>
+
+      <input type="text" id="name" name="name" required>
+
+      </div><br><br>
+
+	<div><label for="phone">Phone No:</label>
+
+      <input type="number" id="no" name="no" required>
+	</div><br><br>
+
+      <div><label for="email">Email:</label>
+
+      <input type="email" id="email" name="email" required>
+
+      </div><br>
+<br>
+
+      <div><label for="blood_group">Blood Group:</label>
+
+      <select id="blood_group" name="blood_group">
+
+        <option value="A+">A+</option>
+
+        <option value="B+">B+</option>
+
+        <option value="O+">O+</option>
+
+        <option value="AB+">AB+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+
+        <option value="O-">O-</option>
+
+        <option value="AB-">AB-</option>
+
+      </select>
+
+	</div><br><br>
+
+	<div><label for="dob">Date of birth:</label>
+  	<input type="date" id="dob" name="dob">
+	</div><br><br>
+
+  <div><label for="country"> Country: </label>
+	<select id="country" name="country">
+    <option value="">Select a country</option>
+    <option value="india" selected>India</option>
+  </select>
+  </div><br><br>
+
+  <div><label for="state">State:</label>
+	<select id="state" name="state">
+    <option value="">Select a state</option>
+    <option value="Kerala" selected>kerala</option>
+  </select>
+  </div><br><br>
+
+	<div><label for="district">District:</label>
+	<select id="district" name="district">
+	<option value="alappuzha">Alappuzha</option>
+      <option value="ernakulam">Ernakulam</option>
+      <option value="idukki">Idukki</option>
+      <option value="kannur">Kannur</option>
+      <option value="kasaragod">Kasaragod</option>
+      <option value="kollam">Kollam</option>
+      <option value="kottayam">Kottayam</option>
+      <option value="kozhikode">Kozhikode</option>
+      <option value="malappuram">Malappuram</option>
+      <option value="palakkad">Palakkad</option>
+      <option value="pathanamthitta">Pathanamthitta</option>
+      <option value="thrissur">Thrissur</option>
+      <option value="thiruvananthapuram">Thiruvananthapuram</option>
+      <option value="wayanad">Wayanad</option></select>
+  	</div><br><br>
+
+  <div><label for="place">Place:</label>
+  <input type="text" id="place" name="place" required>
+  </div><br><br><br>
+	<div class="button">
+      		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+      		<input type="button" value="Back" onclick="history.go(-1)">
+	</div>    
+	</form><br><br><br>
+	<footer class="header">
+		<p>Instructions to Register: Currently the project is only focusing for the users and donor within kerala,india. our project devolopment team is currently working to make it possible world wide. if you are a keralite kindly register. Thank you</p>
+	</footer>
+</body>
+</html>
